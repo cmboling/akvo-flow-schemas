@@ -8,5 +8,6 @@ RELEASE_VERSION=`echo ${POM_VERSION} | sed "s/-SNAPSHOT/.${TRAVIS_BUILD_NUMBER}.
 
 echo "POM version: ${POM_VERSION}, Release version: ${RELEASE_VERSION}"
 
+mvn schema-registry:register
 mvn versions:set -DnewVersion=${RELEASE_VERSION}
 mvn deploy -s /app/maven-ci-settings.xml

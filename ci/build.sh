@@ -14,7 +14,11 @@ fi
 
 docker build --rm=false -t akvo-flow-schemas:develop . -f Dockerfile-ci
 
-if [[ "${TRAVIS_BRANCH}" != "develop" ]] && [[ "${TRAVIS_BRANCH}" != "master" ]]; then
+docker run \
+    -v `pwd`:/app -v $HOME/.m2:/root/.m2 \
+    akvo-flow-schemas:develop mvn schema-registry:test-compatibility
+
+if [[ "${TRAVIS_BRANCH}" != "master" ]]; then
     exit 0
 fi
 
