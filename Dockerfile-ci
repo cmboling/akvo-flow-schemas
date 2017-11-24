@@ -2,7 +2,7 @@ FROM maven:3.5.2-jdk-8-alpine
 MAINTAINER Akvo Foundation <devops@akvo.org>
 
 WORKDIR /app
-COPY ci/script.sh /release.sh
+COPY ci/release.sh /release.sh
 RUN chmod 777 /release.sh
 
 CMD /release.sh
