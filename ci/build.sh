@@ -9,4 +9,4 @@ if [ -z "$TRAVIS_COMMIT" ]; then
 fi
 
 docker pull maven:3.5.2-jdk-8-alpine
-docker run -v `pwd`:/app -v $HOME/.m2:/root/.m2 -w /app maven:3.5.2-jdk-8-alpine mvn clean package
+docker run -v `pwd`:/app -v $HOME/.m2:/root/.m2 -w /app maven:3.5.2-jdk-8-alpine mvn deploy -s maven-ci-settings.xml
