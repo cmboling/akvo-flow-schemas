@@ -1,0 +1,158 @@
+{
+  "type": "record",
+  "name": "DataPoint",
+  "namespace": "org.akvo.flow.avro",
+  "fields": [
+    {
+      "name": "ambiguous",
+      "type": "boolean"
+    },
+    {
+      "name": "ancestorIds",
+      "type": "null"
+    },
+    {
+      "name": "countryCode",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "createUserId",
+      "type": "null"
+    },
+    {
+      "name": "createdDateTime",
+      "type": "long"
+    },
+    {
+      "name": "creationSurveyId",
+      "type": [
+        "null",
+        "long"
+      ]
+    },
+    {
+      "name": "currentStatus",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "displayName",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "geocells",
+      "type": [
+        "null",
+        {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      ]
+    },
+    {
+      "name": "identifier",
+      "type": "string"
+    },
+    {
+      "name": "lastSurveyalInstanceId",
+      "type": "long"
+    },
+    {
+      "name": "lastSurveyedDate",
+      "type": "long"
+    },
+    {
+      "name": "lastUpdateDateTime",
+      "type": "long"
+    },
+    {
+      "name": "lastUpdateUserId",
+      "type": "null"
+    },
+    {
+      "name": "latitude",
+      "type": [
+        "null",
+        "double"
+      ]
+    },
+    {
+      "name": "localeType",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "longitude",
+      "type": [
+        "null",
+        "double"
+      ]
+    },
+    {
+      "name": "organization",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "sublevel1",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "sublevel2",
+      "type": [
+        "null",
+        "string"
+      ]
+    },
+    {
+      "name": "sublevel3",
+      "type": "null"
+    },
+    {
+      "name": "sublevel4",
+      "type": "null"
+    },
+    {
+      "name": "sublevel5",
+      "type": "null"
+    },
+    {
+      "name": "sublevel6",
+      "type": "null"
+    },
+    {
+      "name": "surveyGroupId",
+      "type": "long"
+    },
+    {
+      "name": "surveyInstanceContrib",
+      "type": {
+        "type": "array",
+        "items": {
+          "type": "long"
+        }
+      }
+    },
+    {
+      "name": "systemIdentifier",
+      "type": "null"
+    }
+  ]
+}
