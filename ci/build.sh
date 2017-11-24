@@ -19,5 +19,5 @@ fi
 docker build --rm=false -t akvo-flow-schemas:develop . -f Dockerfile-ci
 docker run \
     -v `pwd`:/app -v $HOME/.m2:/root/.m2 \
-    -e CLOJARS_PASSWORD="$CLOJARS_PASSWORD" -e TRAVIS_COMMIT="${TRAVIS_COMMIT}" -e TRAVIS_BUILD="${TRAVIS_BUILD}" \
+    -e CLOJARS_PASSWORD="$CLOJARS_PASSWORD" -e TRAVIS_COMMIT="${TRAVIS_COMMIT}" -e TRAVIS_BUILD_NUMBER="${TRAVIS_BUILD_NUMBER}" \
      akvo-flow-schemas:develop /script.sh
