@@ -17,6 +17,6 @@ If you don't have and don't want to install Maven, just pull a Docker container 
      docker pull maven:3.5.2-jdk-8-alpine
      docker run -v `pwd`:/app --name akvo-flow-schemas -w /app -it maven:3.5.2-jdk-8-alpine /bin/bash
 
-After existing that container, you can always start it again with:
+After exiting that container, you can always start it again with:
     
      docker start -i akvo-flow-schemas
