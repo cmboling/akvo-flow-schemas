@@ -10,4 +10,7 @@ echo "POM version: ${POM_VERSION}, Release version: ${RELEASE_VERSION}"
 
 mvn schema-registry:register
 mvn versions:set -DnewVersion=${RELEASE_VERSION}
-mvn deploy -s /app/maven-ci-settings.xml
+
+gpg --batch --passphrase ${CLOJARS_GPG_PASSWORD} --import devops.asc
+
+mvn deploy -s /app/maven-ci-settings.xml -Dgpg.passphrase=${CLOJARS_GPG_PASSWORD}

@@ -1,6 +1,8 @@
 FROM maven:3.5.2-jdk-8-alpine
 MAINTAINER Akvo Foundation <devops@akvo.org>
 
+RUN apk update && apk add gnupg 
+
 WORKDIR /app
 COPY ci/release.sh /release.sh
 RUN chmod 777 /release.sh
