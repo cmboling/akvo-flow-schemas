@@ -56,7 +56,7 @@
                 <version>3.3.1</version>
                 <configuration>
                     <schemaRegistryUrls>
-                        <param>http://kafka-schema-registry.akvotest.org</param>
+                        <param>http://kafka-schema-registry.akvotest.org:8081</param>
                     </schemaRegistryUrls>
                     <subjects>
                         <testing-schema-project-itself-value>src/main/avro/DataPoint-value.avsc</testing-schema-project-itself-value>
