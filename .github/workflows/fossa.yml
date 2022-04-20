@@ -23,6 +23,16 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - run: |
          mvn -v
+         
+      - name: Setup Maven Action
+        uses: s4u/setup-maven-action@main
+        with:
+          java-version: 12
+          maven-version: 3.8.0
+
+      - run: |
+         mvn -v
+
       - uses: actions/checkout@v3
 
       - uses: fossas/fossa-action@4e9e28fae0306e89d02e6a56c9ffcdae42043cb8
