@@ -40,3 +40,9 @@ jobs:
           api-key: ${{ env.FOSSA_API_KEY }}
           branch: ${{ github.ref_name }}
           # branch: $GITHUB_REF
+          
+      - name: Running FOSSA CLI
+        run: |
+          curl -H 'Cache-Control: no-cache' https://raw.githubusercontent.com/fossas/fossa-cli/master/install-latest.sh | bash
+          fossa --version
+          fossa analyze -o --debug
