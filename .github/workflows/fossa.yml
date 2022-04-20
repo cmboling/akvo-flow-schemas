@@ -28,7 +28,7 @@ jobs:
         uses: s4u/setup-maven-action@main
         with:
           java-version: 11
-          maven-version: 3.8.0
+          maven-version: 3.6.3
 
       - run: |
          mvn -v
