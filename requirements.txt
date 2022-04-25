@@ -1,2 +1,9 @@
-tarsafe==0.0.3
-pyaml==21.10.1
+pytest
+pytest-cov
+pytest-mock
+black
+boto3
+botocore
+pyyaml
+python-gnupg
+tarsafe
